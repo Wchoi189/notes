@@ -1,0 +1,105 @@
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-16. NOTES. VIDEO: EX05 React+Backend
+----------------------------------------------------------------------------------------------
+Terminology
+
+
+
+
+VIDEO
+
+libraries:
+yarn add mysql
+yarn add axios
+ 
+0926 API rendering
+0928비구조할당 이유 
+1058 mui
+1051 delete params
+1104탈퇴 로직
+1122 dialog
+1310 delete button again
+13  Insert
+1353 File upload
+1420 file upload /insert
+1513 pagination
+1543 search
+1557 search results/page debugging
+SearchAppbar
+yarn add@mui/icons-material
+yarn add http-proxy-middleware
+1633 search results fixed
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-14. NOTES. VIDEO: EX05 React+Backend
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-11. NOTES. VIDEO: EX04 React
+----------------------------------------------------------------------------------------------
+Terminology
+
+
+
+
+VIDEO
+
+
+
+
+NOTES
+React.pdf 9장
+16:10 review query
+
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-10. NOTES. VIDEO: EX03 React
+----------------------------------------------------------------------------------------------
+Terminology
+props 
+state
+
+hooks
+useState
+useEffect
+useRef
+useCallback
+
+
+1539 Todo's
+yarn add react-router-dom@5.3.0
+ yarn add qs  //query string library
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-08. NOTES. VIDEO: EX02 React
+----------------------------------------------------------------------------------------------
+Terminology
+
+
+
+Video
+0900 학생관리
+1015 Student insert recap
+1021 onChange
+1109 Product.js
+1126 Product List End.
+1518 Todo list
+1540 page number *
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-07. NOTES. VIDEO: EX01 React
+----------------------------------------------------------------------------------------------
+Terminology
+JSX 문법(XML)
+onButtonClick
+onChange
+onKeyPress
+input value
+
+rafce
+
+
+CMDS:
+npminstall -g yarn
+yarn create react-app ex01
+//Cannot find project.json
+init npm
+init yarn
+
+Video
+1315 changeevent

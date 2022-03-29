@@ -1,0 +1,331 @@
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-04. NOTES. VIDEO: EX16 Firestore
+----------------------------------------------------------------------------------------------
+0935 Motivation. Getting Hired.
+1003 HASHMAP
+1016상품등록 HASHMAP
+1020 FireStore DB connect
+
+
+Terminology
+addOnSuccessListener
+
+onActivityResult
+
+
+
+
+//CHECK PERSMISSION
+public void checkPermission(){
+        String[] permissions= { Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.CAMERA };
+        ArrayList<String> noPermissions=new ArrayList<>();
+        for(String permission:permissions){
+            if(ActivityCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED){
+                noPermissions.add(permission);
+            }
+        }
+        if(noPermissions.size() > 0){
+            String[] reqPermissions=noPermissions.toArray(new String[noPermissions.size()]);
+            ActivityCompat.requestPermissions(this, reqPermissions,100);
+        }
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-03. NOTES. VIDEO: EX15 Firebase
+----------------------------------------------------------------------------------------------
+TimeLine:
+0944 ChatActivity
+1025 File UPLOAD/cursor/uses permission
+11:10 Upload Check using VO 
+(11:28)/저장된 정보출력 addChildEventListener + troubleshooting
+13:20 debugging null value for USERVO
+1330 chatting. image.
+1433 item_chat
+1457 BindViewHolder. Image.
+1330 수정버턴을 클릭한경우
+
+
+Terminology
+onActivityResult
+cursor.moveToFirst
+getContentResolver()
+StorageReference
+storage.getReference()
+FirebaseDatabase
+DatabaseReference
+Uri uriFile=Uri.fromFile(new File(strFile));
+QueryDocumentSnapshot
+
+
+
+
+ROUNDED BUTTONS:
+CREATE DRAWABLE RESOURCE:
+"RADIUS"
+PASTE:
+
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" android:padding = "10dp">
+    <solid android:color="#ffffff"></solid>
+    <corners
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp"></corners>
+    <stroke android:width="2dp"
+        android:color="#BDBDBD"></stroke>
+</shape>
+
+USE:
+android:background="@drawable/radius"
+----------------------------------------------------------------------------------------------
+ANDROID 2022-03-02. NOTES. VIDEO: EX14 Firebase(Memo/Chatting)
+----------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------
+ANDROID 2022-02-24. NOTES. VIDEO: EX10 개시판 
+----------------------------------------------------------------------------------------------
+storage/self/primary/picture
+TIMELINE:
+0932
+
+1515 VO
+
+search function text 
+1644 recap search function MUST WATCH
+
+http://192.168.0.103:3000/bbs/list?order=title&word=lipsum
+
+WORKBENCH NOTES:
+create user 'app'@'localhost' identified by 'pass';
+create database appdb;
+grant all privileges on appdb.* to 'app'@'localhost';
+
+create table bbs(
+id int auto_increment primary key,
+title varchar(500) not null,
+contents varchar(2000),
+date datetime default now()
+);
+
+
+insert into bbs(title,contents)
+values('Lorem Ipsum','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text');
+
+insert into bbs(title,contents)
+values('Where does it come from?','Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,');
+
+
+insert into bbs(title,contents)
+values('Where can I get some?','There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. I');
+
+
+insert into bbs(title,contents)
+values('Why do we use it?','it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,');
+
+
+insert into bbs(title,contents)
+values('Where can I get some?','All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words');
+
+insert into bbs(title,contents)
+values('Why do we use it?','it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,');
+
+
+insert into bbs(title,contents)
+values('Where can I get some?','All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words');
+
+insert into bbs(title,contents)
+values('Why do we use it?','it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,');
+
+
+insert into bbs(title,contents)
+values('Where can I get some?','All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words');
+
+select * from bbs;
+select count(*) from bbs;
+----------------------------------------------------------------------------------------------
+ANDROID 2022-02-23. NOTES. VIDEO: EX09 API 검색
+----------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------
+ANDROID 2022-02-22. NOTES. VIDEO: EX08(API 카카오 검색
+----------------------------------------------------------------------------------------------
+1225 jArray.length()
+1441 LOCAL
+
+----------------------------------------------------------------------------------------------
+ANDROID 2022-02-21. NOTES. VIDEO: EX07
+----------------------------------------------------------------------------------------------
+Terminology to Study:
+
+
+
+##################################################
+PROCEDURES
+Make Options menu
+
+
+LIBRARIES:
+implementation 'com.android.support:design:30.0.0' 
+implementation 'de.hdodenhof:circleimageview:3.1.0'
+Rounded Buttons:
+https://medium.com/swlh/rounded-button-in-android-studios-fbd1ee0b3161
+
+-
+    implementation 'com.android.support:design:30.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    
+	implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+----------------------------------------------------------------------------------------------
+ANDROID 2022-02-18. NOTES. VIDEO: 주소관리장. EX06
+----------------------------------------------------------------------------------------------
+Terminology to Study:
+
+MENU>
+COMCAT
+MainActivity:
+
+public boolean onCreateOptionsMenu(Menu menu) {
+       getMenuInflater().inflate(R.menu.main, menu); INFLATES MENU USING MAIN.XML
+
+onPrepareOptionsMenu(Menu menu) MAKES OPTIONS MENU CHECKABLE. SWITCH MENU.
+
+actionBar.setHomeButtonEnabled(true) will just make the icon clickable, with the color at the background of the icon as a feedback of the click.
+actionBar.setDisplayHomeAsUpEnabled(true) will make the icon clickable and add the < at the left of the icon.
+
+DATABASE>
+SQLiteDatabase db; 
+Cursor cursor=db.rawQuery(sql,null);
+cursor.moveToNext
+ SearchView searchView=(SearchView)search.getActionView();
+##################################################
+PROCEDURES
+
+TOP MENU CREATION:
+0854 menu. creation. under res. android resource file. main.xml. MENU. SUB MENUS. GROUP: CHECKABLE BEHAVIOR.
+0858. MENU REGISTERATION. MainActivity. public boolean onCreateOptionsMenu(Menu menu) {
+Then inflate it using:  getMenuInflater().inflate(R.menu.main, menu);
+0902 Assign id's to menu items. main.xml
+0903 make it checkable:
+String order="recently"; Add cases under onCreateOptionsMenu
+
+define menus: make it checkable.
+public boolean onPrepareOptionsMenu(Menu menu)
+case "recently":
+                menu.findItem(R.id.recently).setChecked(true);
+                break;
+0914 MENU RECAP
+ON CREATE, ON OPTIONSITEM SLECTED,ON CREATE OPTIONS MENU, ON PREPARE OPTIONS MENU.
+
+DATABASE:
+0916 Address.DB.  public class AddressDB extends SQLiteOpenHelper
+0925 DB + SAMPLE DATA
+0926. MAIN ACTIVITY. DECLARE DB VARIABLES:
+AddressDB addressDB;
+    SQLiteDatabase db; AND UNDER ON CREATE: DECLARE:
+
+addressDB=new AddressDB(this);
+        db=addressDB.getWritableDatabase();
+
+0946~0953 AddressDAO.
+1021 Add ADAPTER
+
+1058 Change view icons. main.xml
+1312 click on phone icon:
+Add imageview
+AddAdapter. Add onclick listener. @ public void onbindview
+1330 floating action button. Add
+1441 Insert Activity. Adding a picture to contacts. UNDER On Create. below.
+
+public void mClick(view view) Switch case. Add alertDialog.builder box.. (SEE PAGE 196?)
+add setpositivebutton with new dialog
+---------------------------------------------------------
+
+-------------------------------------
+ANDROID 2022-02-17. NOTES. VIDEO: 일기장 EX05
+----------------------------------------------------------------------------------------------
+Terminology to Study:
+1.When creating a top menu:
+onCreateOptionsMenu
+onPrepareOptionsMenu
+onOptionsItemSelected
+
+1020: ViewHolder. What is it?
+
+2. Creating a database:
+public class DiaryDB extends SQLiteOpenHelper
+
+3.Floating action button. inorder to use..
+implementation 'com.android.support:design:30.0.0'
+build gradle
+
+ public boolean onPrepareOptionsMenu(Menu menu) {
+        switch (order){
+            case "recently":
+                menu.findItem(R.id.recently).setChecked(true);
+                break;
+
+4.practice making a alayout 11:16
+*Allows radio item options to be selected
+
+DAO.CREATION:
+4. DiaryAdapter:
+..extends RecyclerView.Adapter<DiaryAdapter.ViewHolder> =implement 3 methods.
+..then
+
+교제1-3 참조
+
+~0859 메뉴구성
+~0927 database 만들기
+10:04 dao creation page. Main activity: ArrayList, hashmap declare.
+0954 DAO CREATE
+1011 After dao creation adapter is made. DiaryAdapter. java class under java project
+1057 .New Activity. Insert diary. INSERT
+11:16 layout insert
+
+1313: Database 연결 debuggin. SHARE SCREEN.
+
+1351~1356 READ 
+1421 READ DAO Hashmap. Cursor.
+1442 수정 UPDATE
+1533 DELETE
+1550 SORTING.정렬
+public void refreshList() dptj 에서 order 보내줏기
+
+16:12 SEARCH
+----------------------------------------------------------------------------------------------
+ANDROID 2022-02-16. NOTES. VIDEO: 메모장 앱. EX04
+----------------------------------------------------------------------------------------------
+0910 Create a database. MemoDB.java and SQLiteOpenHelper
+1008 listview adapter
+1055 InsertActivity
+11:11 onoption item. home button at insert activty xml
+1424 UPDATE A MEMO PAGE
+1528
+
+----------------------------------------------------------------------------------------------
+ANDROID 2022-02-15. NOTES. VIDEO: EX03
+----------------------------------------------------------------------------------------------
+0918: 수업시작
+1313 ex03
+1438~15:26 삭제
+~15:29 등록 끝
+16:19,16:29 update
+----------------------------------------------------------------------------------------------
+ANDROID 2022-02-14. NOTES. VIDEO: EX02
+----------------------------------------------------------------------------------------------
+13:30
+14:20 mainactivity 3
+16:15  Act 4
+1644: recap terms
+
+
+
+
